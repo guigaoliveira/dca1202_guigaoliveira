@@ -10,6 +10,8 @@
     make check
     make install
 
+    na pasta do projeto (dca12012_guigaoliveira) executei 
+
     cc -I/home/xyz/gc/include questao20.c /home/xyz/gc/lib/libgc.a -o questao20
 
     ./questao20
