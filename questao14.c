@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void exchange(float *arr, int len)
+void sort(float *arr, int len)
 {
   int i = 0, j = 0, aux = 0;
   for (i = len - 1; i > 0; i--)
@@ -41,7 +41,7 @@ void printArrayFloat()
     scanf("%f", &arr[i]);
   }
 
-  exchange(arr, len);
+  sort(arr, len);
 
   printf("Resultado: ");
 
