@@ -29,7 +29,7 @@ int main()
     size_t initial;
 
     GC_INIT();
-    for (i = 0; i < n; ++i)
+    for (i = 0; i < n; i++)
     {
         if (i == 0)
         {
@@ -38,7 +38,7 @@ int main()
         int **p = (int **)GC_MALLOC(sizeof(int *));
         int *q = (int *)GC_MALLOC_ATOMIC(sizeof(int));
         assert(*p == 0);
-        *p = (int *)GC_REALLOC(q, n * sizeof(int));
+        *p = (int *)GC_REALLOC(q, i * sizeof(int));
         printf("Heap size = %zu\n", GC_get_heap_size());
     }
     printf("Heap size (initial) = %zu\n", initial);

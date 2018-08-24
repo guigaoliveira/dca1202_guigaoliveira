@@ -30,7 +30,7 @@ void printArrayFloat()
 
     int i = 0, j = 0, len = 0;
 
-    clock_t t1, t2;
+    clock_t t;
 
     printf("Entre com o tamanho do vetor: ");
 
@@ -49,9 +49,9 @@ void printArrayFloat()
         scanf("%f", &arr[i]);
     }
 
-    t1 = clock();
+    t = clock();
     qsort(arr, len, sizeof(float), compare);
-    printf("Tempo usando a função qsort (do C):%f", (clock() - t1) / (double)CLOCKS_PER_SEC);
+    printf("Tempo usando a função qsort (do C):%f", (clock() - t) / (double)CLOCKS_PER_SEC);
 
     printf("\nResultado usando a função qsort (do C): ");
     for (i = 0; i < len; i++)
@@ -59,9 +59,9 @@ void printArrayFloat()
         printf("%f ", arr[i]);
     }
 
-    t2 = clock();
+    t = clock();
     sort(arr, len);
-    printf("\nTempo usando a função sort (criada pelo aluno):%f", (clock() - t2) / (double)CLOCKS_PER_SEC);
+    printf("\nTempo usando a função sort (criada pelo aluno):%f", (clock() - t) / (double)CLOCKS_PER_SEC);
 
     printf("\nResultado usando a função sort (criada pelo aluno): ");
     for (i = 0; i < len; i++)

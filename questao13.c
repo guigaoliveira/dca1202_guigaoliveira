@@ -1,12 +1,13 @@
-Um ponteiro para função aponta para outra função, armazenando o endereço para a função, que pode ser chamada como uma função normalmente.Referências : https : //pt.stackoverflow.com/questions/2983/como-passar-uma-fun%C3%A7%C3%A3o-como-par%C3%A2metro-em-c
+/* 
+  Um ponteiro para função aponta para outra função, armazenando o endereço para a função, que pode ser chamada como uma função normalmente.
+  Referências: https://pt.stackoverflow.com/questions/2983/como-passar-uma-fun%C3%A7%C3%A3o-como-par%C3%A2metro-em-c
+*/
 
-                                                                                                                                                               Exemplo :
-
-// Diferentes formas de composição de função
+// Exemplo: Diferentes formas de composição de função
 
 #include <stdio.h>
 
-    typedef int (*Function)(int); // define um tipo de função para simplificar a notação
+typedef int (*Function)(int); // define um tipo de função para simplificar a notação
 
 int g(int n)
 {
